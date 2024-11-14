@@ -391,3 +391,199 @@ th {
         transform: translateY(0);
     }
 }
+
+/* Proyectos Interactivos */
+.projects {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Variable-Speed Animated Title */
+.animated-title {
+    font-size: 2rem;
+    animation: slideIn 3s ease-in-out infinite alternate;
+}
+
+/* Carousel */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.carousel-inner {
+    display: flex;
+    gap: 1rem;
+    animation: scrollCarousel 16s linear infinite;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* New Overlay Class */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.carousel-item:hover .carousel-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Project List with Entry and Exit Animations */
+.project-list {
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-list li {
+    font-size: 1rem;
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    animation: fadeInOut 4s ease-in-out alternate infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-10px);
+        color: #000;
+    }
+    to {
+        transform: translateX(10px);
+        color: #007bff;
+    }
+}
+
+/* Smooth Scrolling Carousel */
+@keyframes scrollCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Biblioteca Personal */
+.library {
+    padding: 2rem;
+    text-align: center;
+}
+
+.animated-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Book List Styling */
+.book-list {
+    list-style: decimal inside;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.book-item {
+    margin-bottom: 1rem;
+}
+
+summary {
+    font-size: 1.2rem;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.book-details {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+    overflow: hidden;
+}
+
+.book-details img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+.book-summary {
+    margin: 0;
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap; /* Keep typewriter effect inline */
+    overflow: hidden;
+}
+
+/* Typewriter Animation */
+.typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
