@@ -343,7 +343,7 @@ th {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(50px);
-    animation: slideIn 0.8s ease-out forwards;
+    animation: slideInBlog 0.8s ease-out forwards;
 }
 
 .blog-post img {
@@ -381,7 +381,7 @@ th {
 }
 
 /* Animación de desplazamiento inicial */
-@keyframes slideIn {
+@keyframes slideInBlog {
     from {
         opacity: 0;
         transform: translateY(50px);
@@ -579,11 +579,19 @@ summary {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
 }
