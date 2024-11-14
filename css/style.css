@@ -1,4 +1,10 @@
 /* Base */
+html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
 html {
     color: #222;
     font-size: 1em;
@@ -185,7 +191,7 @@ footer {
     }
 }
 
-.social{
+.social {
     gap: 2rem;
 }
 
@@ -197,6 +203,10 @@ footer {
 .social-icon:hover {
     transform: scale(1.2);
     filter: brightness(1.5);
+}
+
+a > img {
+    cursor: pointer;
 }
 
 /* Animación de Ciclo de Colores */
@@ -240,4 +250,76 @@ th, td {
 th {
     background-color: #7691ab;
     color: white;
+}
+
+/* Galería de Imágenes */
+.thumbs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.thumb {
+    position: relative;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Overlay de título y descripción */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.thumb:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Imagen base */
+.thumb img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: grayscale(50%);
+}
+
+/* Diferentes animaciones al hacer hover en cada imagen */
+.img1:hover img {
+    transform: scale(1.1);
+}
+
+.img2:hover img {
+    transform: rotate(10deg);
+}
+
+.img3:hover img {
+    opacity: 0.8;
+}
+
+.img4:hover img {
+    transform: translateY(-10px);
+}
+
+.img5:hover img {
+    filter: grayscale(0%);
+}
+
+.img6:hover img {
+    transform: scale(1.05) rotate(-10deg);
+    filter: grayscale(0%);
 }
