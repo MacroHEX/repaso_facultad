@@ -148,3 +148,96 @@ footer {
     padding: 0.1rem;
     text-align: center;
 }
+
+/* Botón PDF */
+.btn-pdf {
+    padding: 10px 20px;
+    background-color: #7691ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background-color: #567a99;
+    transform: scale(1.1);
+}
+
+.btn-pdf:active {
+    background-color: #3c5d74;
+    transform: scale(1.05);
+}
+
+/* Efecto de Rotación de Texto */
+.rotate-text {
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.social{
+    gap: 2rem;
+}
+
+/* Social Icons Hover */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+/* Animación de Ciclo de Colores */
+@keyframes color-cycle {
+    0% {
+        background-color: #7691ab;
+    }
+    33% {
+        background-color: #b6ae56;
+    }
+    66% {
+        background-color: #4a9e67;
+    }
+    100% {
+        background-color: #7691ab;
+    }
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    animation: color-cycle 4s infinite;
+}
+
+/* Tabla */
+table {
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+    width: 500px;
+    border-radius: 10px;
+}
+
+th, td {
+    font-family: 'Motnserrat', sans-serif;
+    text-align: left;
+    font-size: 12px;
+    padding: 10px;
+}
+
+th {
+    background-color: #7691ab;
+    color: white;
+}
